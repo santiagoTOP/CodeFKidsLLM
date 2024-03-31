@@ -1,5 +1,7 @@
 ## Lesson 2
 
+[视频链接](https://www.bilibili.com/video/BV1AH4y1H78d/?spm_id_from=333.788&vd_source=1e18dfc082e362f5bc2e775c28dc3dae)  [文档链接](https://github.com/InternLM/Tutorial/blob/camp2/helloworld/hello_world.md)
+
 - ### 基础作业：使用 `InternLM2-Chat-1.8B` 模型生成 300 字的小故事
 
 ![image-20240331112826906](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240331112826906.png)
