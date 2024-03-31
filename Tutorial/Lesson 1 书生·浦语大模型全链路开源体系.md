@@ -72,3 +72,7 @@
 - ### 多模态智能体
 
 ![image-20240331101456148](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240331101456148.png)
+
+## InternLM2 技术文档
+
+![InternLM2](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/InternLM2.png)
