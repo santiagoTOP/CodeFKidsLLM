@@ -255,3 +255,140 @@ python /root/demo/pipeline.py
 #### 通过代码向TurboMind传递参数
 
 ![image-20240410162711778](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240410162711778.png)
+
+### 进阶作业
+
+- 设置KV Cache最大占用比例为0.4，开启W4A16量化，以命令行方式与模型对话。（优秀学员必做）
+
+  - 第一步：开启W4A16量化、
+
+  - ```
+    lmdeploy lite auto_awq \
+       /root/models/Shanghai_AI_Laboratory/internlm2-chat-1_8b \
+      --calib-dataset 'ptb' \
+      --calib-samples 128 \
+      --calib-seqlen 1024 \
+      --w-bits 4 \
+      --w-group-size 128 \
+      --work-dir /root/models/Shanghai_AI_Laboratory/internlm2-chat-1_8b-4bit
+    ```
+
+  - 第二步：设置KV Cache  `--cache-max-entry-count 0.4`
+
+  - 第三步：以命令行方式与模型对话
+  
+  - ```
+    lmdeploy chat /root/models/Shanghai_AI_Laboratory/internlm2-chat-1_8b-4bit --model-format awq --cache-max-entry-count 0.4
+    ```
+  
+  ![image-20240411134851425](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411134851425.png)
+
+- 以API Server方式启动 lmdeploy，开启 W4A16量化，调整KV Cache的占用比例为0.4，分别使用命令行客户端与Gradio网页客户端与模型对话。（优秀学员）
+
+  - 第一步：开启API服务
+
+  - ```
+    lmdeploy serve api_server \
+        /root/models/Shanghai_AI_Laboratory/internlm2-chat-1_8b-4bit \
+        --model-format awq \
+        --cache-max-entry-count 0.4 \
+        --quant-policy 0 \
+        --server-name 0.0.0.0 \
+        --server-port 23333 \
+        --tp 1
+    ```
+
+  - ![image-20240411141420510](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411141420510.png)
+
+  - 第二步：命令客户端访问
+
+  - ```
+    lmdeploy serve api_client http://localhost:23333
+    ```
+
+  - ![image-20240411141605806](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411141605806.png)
+
+  - 第三步：Gradio网页客户端
+
+  - ```
+    lmdeploy serve gradio http://localhost:23333 \
+        --server-name 0.0.0.0 \
+        --server-port 6006
+    ```
+
+  - ![image-20240411141842196](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411141842196.png)
+
+  - ![image-20240411141924031](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411141924031.png)
+
+- 使用W4A16量化，调整KV Cache的占用比例为0.4，使用Python代码集成的方式运行internlm2-chat-1.8b模型。（优秀学员必做）
+
+  - 第一步：创建python脚本
+
+  - ```
+    touch /root/demo/awq_KV_Cache.py
+    ```
+
+  - 第二步：编写脚本
+
+  - ![image-20240411142830485](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411142830485.png)
+  
+  - 第三步：运行脚本`python /root/demo/awq_KV_Cache.py`
+  - ![image-20240411142945764](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411142945764.png)
+
+- 使用 LMDeploy 运行视觉多模态大模型 llava gradio demo （优秀学员必做）
+
+  - 第一步：安装llava依赖包
+
+  - ```
+    pip install git+https://github.com/haotian-liu/LLaVA.git@4e2277a060da264c4f21b364c867cc622c945874
+    ```
+
+  - 第二步：创建脚本
+
+  - ```
+    touch /root/demo/pipline_llava.py
+    ```
+
+  - 第三步：边写脚本
+
+  - ```
+    from lmdeploy.vl import load_image
+    from lmdeploy import pipeline, TurbomindEngineConfig
+    
+    
+    backend_config = TurbomindEngineConfig(session_len=8192) # 图片分辨率较高时请调高session_len
+    # pipe = pipeline('liuhaotian/llava-v1.6-vicuna-7b', backend_config=backend_config) 非开发机运行此命令
+    pipe = pipeline('/share/new_models/liuhaotian/llava-v1.6-vicuna-7b', backend_config=backend_config)
+    
+    image = load_image('https://raw.githubusercontent.com/open-mmlab/mmdeploy/main/tests/data/tiger.jpeg')
+    response = pipe(('describe this image', image))
+    print(response)
+    ```
+
+![image-20240411145721919](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411145721919.png)
+
+- Gradio启动
+
+  - 脚本编写
+
+  - ```
+    import gradio as gr
+    from lmdeploy import pipeline, TurbomindEngineConfig
+    
+    
+    backend_config = TurbomindEngineConfig(session_len=8192) # 图片分辨率较高时请调高session_len
+    # pipe = pipeline('liuhaotian/llava-v1.6-vicuna-7b', backend_config=backend_config) 非开发机运行此命令
+    pipe = pipeline('/share/new_models/liuhaotian/llava-v1.6-vicuna-7b', backend_config=backend_config)
+    
+    def model(image, text):
+        if image is None:
+            return [(text, "请上传一张图片。")]
+        else:
+            response = pipe((text, image)).text
+            return [(text, response)]
+    
+    demo = gr.Interface(fn=model, inputs=[gr.Image(type="pil"), gr.Textbox()], outputs=gr.Chatbot())
+    demo.launch()
+    ```
+
+  ![image-20240411150921367](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411150921367.png)
