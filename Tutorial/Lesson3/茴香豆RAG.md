@@ -243,6 +243,18 @@ python3 -m huixiangdou.main --standalone
 
 拒绝回答.
 
+- Gradio调用
+
+![image-20240412194023532](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240412194023532.png)
+
+- 开启远程
+
+![image-20240412194303223](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240412194303223.png)
+
+开启远程以后显存占用为0
+
+![image-20240412194811446](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240412194811446.png)
+
 ### 茴香豆Web版
 
 [项目地址](https://openxlab.org.cn/apps/detail/tpoisonooo/huixiangdou-web)
