@@ -1,5 +1,7 @@
 ### LMDeploy
 
+[文档链接](https://github.com/InternLM/Tutorial/blob/camp2/lmdeploy/README.md)
+
 #### 大模型部署背景
 
 ![image-20240409132614489](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240409132614489.png)

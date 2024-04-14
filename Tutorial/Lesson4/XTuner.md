@@ -1,5 +1,7 @@
 ## XTuner
 
+[文档链接](https://github.com/InternLM/Tutorial/blob/main/xtuner/README.md)
+
 ### 如何得到一个垂直领域模型
 
 ![image-20240402100042376](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240402100042376.png)

@@ -1,5 +1,7 @@
 ## OpenCompass
 
+[文档链接](https://github.com/InternLM/Tutorial/blob/main/opencompass/opencompass_tutorial.md)
+
 ![image-20240404131659663](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240404131659663.png)
 
 ![image-20240404131734652](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240404131734652.png)

@@ -1,6 +1,6 @@
 ## Lesson 1 书生·浦语大模型全链路开源体系
 
-[视频链接](https://www.bilibili.com/video/BV1Vx421X72D/)
+[视频链接](https://www.bilibili.com/video/BV1Vx421X72D/) 
 
 ## InternLM2 介绍
 
