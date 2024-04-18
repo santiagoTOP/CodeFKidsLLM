@@ -394,3 +394,123 @@ python /root/demo/pipeline.py
     ```
 
   ![image-20240411150921367](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240411150921367.png)
+
+### 将模型部署到OpenXLab上
+
+#### GIT安装
+
+- 安装git以及lfs(Large File Storage)用于模型的部署，使用sudo需要root权限，这里在试验机上没有使用root安装
+
+- ```
+  # install git
+  sudo apt-get update
+  sudo apt-get install git
+  
+  # install git lfs
+  sudo apt-get update
+  sudo apt-get install git-lfs
+  
+  # use git install lfs
+  git lfs install
+  ```
+
+![image-20240418195052983](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418195052983.png)
+
+ #### 配置git账户信息
+
+- 用于与openxlab与本地git交互
+
+- 配置用户名
+
+- ```
+  git config --global user.name "TNGPNG"
+  ```
+
+- 配置邮箱
+
+- ```
+  git config --global user.email "1537211712top@gmail.com"
+  ```
+
+- 注意用户名是openxlab上的用户名
+
+![image-20240418195613774](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418195613774.png)
+
+#### 在openxlab上创建仓库
+
+<img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418200154542.png" alt="image-20240418200154542" style="zoom:50%;" />
+
+- 获取下载地址，clone到本地
+
+<img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418200353965.png" alt="image-20240418200353965" style="zoom: 50%;" />
+
+<img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418200548311.png" alt="image-20240418200548311" style="zoom:50%;" />
+
+####  获取 Git Access Token
+
+- 用于后续的模型上传时需要
+- <img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418201000168.png" alt="image-20240418201000168" style="zoom: 67%;" />
+
+- <img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418201104141.png" alt="image-20240418201104141" style="zoom:67%;" />
+
+#### 上传模型到openxlab
+
+- 第一步需要将模型文件复制到本地的仓库里面
+
+- ```
+  cp -r share/new_models/Shanghai_AI_Laboratory/internlm2-chat-7b/* /root/InternLM2-chat-7B/
+  ```
+
+![image-20240418201638191](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418201638191.png)
+
+- **LFS管理大文件**：使用 `git lfs track` 命令来标记你希望通过 Git LFS 管理的大文件
+
+- ```
+  # 表示标记bin和model结尾的文件
+  git lfs track "*.bin"
+  git lfs track "*.model"
+  ```
+
+  ![image-20240418201935723](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418201935723.png)
+
+- 提交仓库的更新信息并进行推送
+
+- ```
+  cd internlm2-chat-7b
+  git add -A
+  git commit -m "upload model"
+  git push
+  ```
+
+<img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418202443960.png" alt="image-20240418202443960" style="zoom:50%;" />
+
+- 查看远程仓库的模型文件
+
+![image-20240418202605332](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418202605332.png)
+
+### 代码仓库
+
+- 在github上创建一个新的仓库用于代码的存储
+
+<img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418203321218.png" alt="image-20240418203321218" style="zoom:50%;" />
+
+- clone到本地并进行编写
+
+![image-20240418204638387](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418204638387.png)
+
+- 推送模型到远程仓库
+
+- ```
+  cd internlm2-chat-7b-git
+  git add -A
+  git commit -m "add app.py requirements.txt packages.txt"
+  git push
+  ```
+
+![image-20240418205044940](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418205044940.png)
+
+### 应用创建
+
+![image-20240418205409741](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418205409741.png)
+
+![image-20240418205504792](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418205504792.png)
