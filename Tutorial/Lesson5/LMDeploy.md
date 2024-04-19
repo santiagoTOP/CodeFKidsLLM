@@ -514,3 +514,14 @@ python /root/demo/pipeline.py
 ![image-20240418205409741](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418205409741.png)
 
 ![image-20240418205504792](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240418205504792.png)
+
+- 应用创建成功并对话
+
+![image-20240419200140300](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240419200140300.png)
+
+- 将应用公开，并查看后台数据
+
+<img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240419200357152.png" alt="image-20240419200357152" style="zoom:50%;" />
+
+<img src="http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240419200308856.png" alt="image-20240419200308856" style="zoom:50%;" />
+

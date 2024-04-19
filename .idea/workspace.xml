@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a30a5a2-a77f-4cae-b754-007fe6167ecf" name="Changes" comment="Delete .idea directory">
-      <change afterPath="$PROJECT_DIR$/Tutorial/Lesson4/Llava多模态微调以及OpenXLab.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tutorial/Lesson4/XTuner微调.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial/Lesson5/LMDeploy.md" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorial/Lesson5/LMDeploy.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,8 @@
       <workItem from="1712923504170" duration="1237000" />
       <workItem from="1712983466207" duration="551000" />
       <workItem from="1713077923471" duration="33000" />
-      <workItem from="1713447739337" duration="433000" />
+      <workItem from="1713447739337" duration="773000" />
+      <workItem from="1713514686947" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <option name="closed" value="true" />
@@ -203,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713447785300</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Delete .idea directory">
+      <option name="closed" value="true" />
+      <created>1713448217867</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713448217867</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
