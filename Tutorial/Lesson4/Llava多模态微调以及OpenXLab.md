@@ -138,3 +138,5 @@ xtuner chat /root/share/new_models/Shanghai_AI_Laboratory/internlm2-chat-1_8b \
 - 微调之后，Llava可以对图片进行描述而不是简单的图片标注
 
 ### OpenXLab
+
+- 部署过程同[LMDeploy](https://github.com/santiagoTOP/CodeFKidsLLM/blob/master/Tutorial/Lesson5/LMDeploy.md)
