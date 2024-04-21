@@ -1,6 +1,6 @@
 ### LMDeploy
 
-[文档链接](https://github.com/InternLM/Tutorial/blob/camp2/lmdeploy/README.md)
+[文档链接](https://github.com/InternLM/Tutorial/blob/camp2/lmdeploy/README.md) [视频链接](https://www.bilibili.com/video/BV1tr421x75B/?spm_id_from=333.788&vd_source=1e18dfc082e362f5bc2e775c28dc3dae)
 
 #### 大模型部署背景
 

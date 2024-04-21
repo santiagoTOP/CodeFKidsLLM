@@ -105,6 +105,7 @@
       <workItem from="1713447739337" duration="773000" />
       <workItem from="1713514686947" duration="654000" />
       <workItem from="1713528673761" duration="133000" />
+      <workItem from="1713604176838" duration="74000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <option name="closed" value="true" />
@@ -226,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713528801591</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Delete .idea directory">
+      <option name="closed" value="true" />
+      <created>1713604200140</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713604200140</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
