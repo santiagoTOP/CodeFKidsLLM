@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a30a5a2-a77f-4cae-b754-007fe6167ecf" name="Changes" comment="Delete .idea directory" />
+    <list default="true" id="7a30a5a2-a77f-4cae-b754-007fe6167ecf" name="Changes" comment="Lesson 7">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +108,8 @@
       <workItem from="1713514686947" duration="654000" />
       <workItem from="1713528673761" duration="133000" />
       <workItem from="1713604176838" duration="74000" />
+      <workItem from="1713681942769" duration="961000" />
+      <workItem from="1713689401572" duration="2559000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <option name="closed" value="true" />
@@ -235,7 +239,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713604200140</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Lesson 7">
+      <option name="closed" value="true" />
+      <created>1713681981175</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713681981175</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Lesson 7">
+      <option name="closed" value="true" />
+      <created>1713682039165</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713682039165</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Lesson 7">
+      <option name="closed" value="true" />
+      <created>1713682330616</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713682330616</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +286,7 @@
     <MESSAGE value="README" />
     <MESSAGE value="langchain" />
     <MESSAGE value="Delete .idea directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete .idea directory" />
+    <MESSAGE value="Lesson 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 7" />
   </component>
 </project>

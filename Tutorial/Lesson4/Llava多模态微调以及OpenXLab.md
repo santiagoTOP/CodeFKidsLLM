@@ -139,4 +139,42 @@ xtuner chat /root/share/new_models/Shanghai_AI_Laboratory/internlm2-chat-1_8b \
 
 ### OpenXLab
 
-- 部署过程同[LMDeploy](https://github.com/santiagoTOP/CodeFKidsLLM/blob/master/Tutorial/Lesson5/LMDeploy.md)
+- 项目的前期环境准备工作同[LMDeploy](https://github.com/santiagoTOP/CodeFKidsLLM/blob/master/Tutorial/Lesson5/LMDeploy.md)
+  - 主要包括git环境的配置
+  - 模型上传配置
+- 第一步：在openxlab上创建模型存储的库，用于模型的上传下载以及存储
+- ![image-20240422095454654](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422095454654.png)
+
+- ![image-20240422100014934](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422100014934.png)
+
+- 第二步：Clone模型文件到本地
+
+- ```
+  git clone https://code.openxlab.org.cn/TNGPNG/InternLM2-chat-1.8B-Person.git
+  ```
+
+  ![image-20240422100154697](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422100154697.png)
+
+- 第三步：将合并后的模型复制到InternLM2-chat-1.8B-Person文件中
+
+- ```
+  cp -r /root/ft/final_model/* /root/InternLM2-chat-1.8B-Person
+  ```
+
+  ![image-20240422100615545](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422100615545.png)
+
+- 第四步：将文件推送到远程的模型文件库中
+- ![image-20240422102103704](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422102103704.png)
+
+- ![image-20240422102446338](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422102446338.png)
+
+- 第五步：在GitHub上创建代码库，用于脚本文件的存储
+- ![image-20240422102650446](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422102650446.png)
+
+- Clone到本地本编写脚本文件
+- ![image-20240422103025805](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422103025805.png)
+
+- ![image-20240422103742655](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422103742655.png)
+
+- 第六步：创建应用并运行
+- ![image-20240422132433715](http://typora-picture-room.oss-cn-chengdu.aliyuncs.com/img/image-20240422132433715.png)
