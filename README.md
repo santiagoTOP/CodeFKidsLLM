@@ -11,6 +11,4 @@
 - 第六课：[Lagent & AgentLego](https://github.com/santiagoTOP/CodeFKidsLLM/blob/master/Tutorial/Lesson6/Lagent%20%26%20AgentLego.md)
 - 第七课：[OpenCompass评测](https://github.com/santiagoTOP/CodeFKidsLLM/blob/master/Tutorial/Lesson7/OpenCompass%E8%AF%84%E6%B5%8B.md)
 
-$$
-{\Psi_{2}-\nu} \; \; \textrm{\sim} \; \left( \int_{t_{1}}^{t_{1}} \mu^{\overleftarrow{{\Psi}}} d t \; \; {\Psi} \;, \right)
-$$
+$K \sp{-1} 0. 9 5$
