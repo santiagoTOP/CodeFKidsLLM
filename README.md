@@ -11,4 +11,3 @@
 - 第六课：[Lagent & AgentLego](https://github.com/santiagoTOP/CodeFKidsLLM/blob/master/Tutorial/Lesson6/Lagent%20%26%20AgentLego.md)
 - 第七课：[OpenCompass评测](https://github.com/santiagoTOP/CodeFKidsLLM/blob/master/Tutorial/Lesson7/OpenCompass%E8%AF%84%E6%B5%8B.md)
 
-$K \sp{-1} 0. 9 5$
